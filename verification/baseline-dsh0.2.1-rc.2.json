@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "kind": "dsh-purge-effect-baseline",
-  "createdAt": "2026-10-21T07:25:02.574Z",
+  "createdAt": "2026-10-21T07:27:30.021Z",
   "plugin": {
     "name": "dsh-purge",
     "version": "1.1.72-dsh021",
     "dshTarget": "0.2.1",
     "repo": "git+https://github.com/feeling6667/dsh-purge-pro.git",
-    "commit": "02e6565c3ad7bbdc19ca1f44e980e95603ee13dd"
+    "commit": "3212aa24ae81e4bb6efba777616b18fa0eb36e8a"
   },
   "host": {
     "surface": "desktop",

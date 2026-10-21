@@ -1,0 +1,33 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 语法预检 / syntax check
+        run: |
+          node --check lib/index.js
+          node --check lib/core.js
+          node --check scripts/verify-pro.mjs
+          node --input-type=module -e "import './lib/index.js'"
+
+      - name: 远端内容 == 本次提交 / remote tarball matches this commit
+        run: node scripts/verify-pro.mjs --repo --ref "$GITHUB_SHA"
+
+      - name: 基线文件结构自检 / baseline sanity
+        run: |
+          node -e "const b=require('./verification/baseline-dsh0.2.1-rc.2.json'); if(!b.kernel_sha256||!b.files||Object.keys(b.files).length<50) process.exit(1); console.log('patches',b.patches.length,'files',Object.keys(b.files).length,'kernel',b.kernel_sha256.slice(0,12))"

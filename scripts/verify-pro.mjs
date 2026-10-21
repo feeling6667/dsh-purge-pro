@@ -299,7 +299,8 @@ async function cmdRepo() {
   const dir = path.resolve(flag("--dir", ROOT));
   const meta = pluginMeta();
   const repo = (process.env.PURGE_REPO || "feeling6667/dsh-purge-pro").trim();
-  const refName = ref || "master";
+  // 默认比对当前 HEAD 的 commit：codeload 对 master/tag 这类可变 ref 有 CDN 缓存，会对不上刚推上去的改动。
+  const refName = ref || (meta.commit ? meta.commit : "master");
   const url = `https://codeload.github.com/${repo}/tar.gz/${refName}`;
   console.log(`拉取 ${url}`);
   const entries = tarEntries(zlib.gunzipSync(await get(url)));

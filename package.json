@@ -55,11 +55,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/feeling6667/PURGE-PRO.git"
+    "url": "git+https://github.com/feeling6667/dsh-purge-pro.git"
   },
-  "homepage": "https://github.com/feeling6667/PURGE-PRO#readme",
+  "homepage": "https://github.com/feeling6667/dsh-purge-pro#readme",
   "bugs": {
-    "url": "https://github.com/feeling6667/PURGE-PRO/issues"
+    "url": "https://github.com/feeling6667/dsh-purge-pro/issues"
   },
   "upstream": "https://github.com/YuJunZhiXue/dsh-purge",
   "dsh": {
@@ -77,9 +77,9 @@
     },
     "install": {
       "preferred": "tarball",
-      "tarball": "https://github.com/feeling6667/PURGE-PRO/archive/refs/heads/master.tar.gz",
-      "zip": "https://github.com/feeling6667/PURGE-PRO/archive/refs/heads/master.zip",
-      "git": "https://github.com/feeling6667/PURGE-PRO.git"
+      "tarball": "https://github.com/feeling6667/dsh-purge-pro/archive/refs/heads/master.tar.gz",
+      "zip": "https://github.com/feeling6667/dsh-purge-pro/archive/refs/heads/master.zip",
+      "git": "https://github.com/feeling6667/dsh-purge-pro.git"
     }
   },
   "publishConfig": {

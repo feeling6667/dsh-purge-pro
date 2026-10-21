@@ -1,7 +1,7 @@
 {
   "name": "dsh-purge",
   "version": "1.1.72-dsh021",
-  "description": "DeepSeek Harness 破甲（dsh 0.2.1 适配版）：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 上游 1.1.71 只适配 dsh 0.2.0-rc.2，本版把 82 个补丁的锚点全部对齐 dsh 0.2.1。",
+  "description": "dsh-purge 的非官方分支（fork）：适配 DeepSeek Harness 0.2.1-rc.2、破甲内核 v3。让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {

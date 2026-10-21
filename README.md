@@ -16,6 +16,7 @@ Upstream 1.1.71 only targets dsh <code>0.2.0-rc.2</code>, where 4 of its patches
 All four are realigned here, and the wrong client deps in <code>dsh.client.inject</code> are fixed.
 Change list, verification data, install steps and repro: <a href="适配说明-0.2.1.md">适配说明-0.2.1.md</a>.</p>
 </blockquote>
+<p><strong>Verify it yourself:</strong> <code>node scripts/verify-pro.mjs --repo</code> (uploaded == local), then <code>node scripts/verify-pro.mjs --check</code> after install (host files byte-identical to the shipped baseline). Details: <a href="docs/验证-同效果.md">docs/验证-同效果.md</a>.</p>
 <p align="center">
   <a href="https://github.com/YuJunZhiXue/dsh-purge/stargazers"><img src="https://img.shields.io/github/stars/YuJunZhiXue/dsh-purge?logo=github&label=Stars" alt="GitHub stars"></a>
   <a href="https://github.com/YuJunZhiXue/dsh-purge/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-65a30d?style=flat" alt="MIT license"></a>

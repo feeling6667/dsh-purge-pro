@@ -8,6 +8,8 @@
 > 改动清单、验证数据、安装步骤、复现方法见 **[适配说明-0.2.1.md](适配说明-0.2.1.md)**。
 > 下面的原文（含「只支持 dsh 0.2 / 0.2.0-rc.2」等表述）是上游原文，未逐句改写，以适配说明为准。
 
+> **自己验：**装之前 <code>node scripts/verify-pro.mjs --repo</code>（上传的 = 本地这份），装之后 <code>node scripts/verify-pro.mjs --check</code>（宿主文件与随包基线逐字节一致）。说明见 <a href="docs/验证-同效果.md">docs/验证-同效果.md</a>。
+
 ---
 
 <p align="center">

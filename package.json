@@ -35,7 +35,10 @@
   ],
   "scripts": {
     "embed-prompt": "node scripts/embed-default-prompt.mjs",
-    "build:client": "node scripts/build-client.mjs"
+    "build:client": "node scripts/build-client.mjs",
+    "verify": "node scripts/verify-pro.mjs --check",
+    "verify:repo": "node scripts/verify-pro.mjs --repo",
+    "verify:baseline": "node scripts/verify-pro.mjs --baseline"
   },
   "license": "MIT",
   "keywords": [

@@ -1,0 +1,888 @@
+{
+  "schema": 1,
+  "kind": "dsh-purge-effect-baseline",
+  "createdAt": "2026-10-21T07:25:02.574Z",
+  "plugin": {
+    "name": "dsh-purge",
+    "version": "1.1.72-dsh021",
+    "dshTarget": "0.2.1",
+    "repo": "git+https://github.com/feeling6667/dsh-purge-pro.git",
+    "commit": "02e6565c3ad7bbdc19ca1f44e980e95603ee13dd"
+  },
+  "host": {
+    "surface": "desktop",
+    "versions": {
+      "dsh": "0.2.1-rc.2",
+      "dsh-agent-instructions": "0.2.1-rc.2",
+      "dsh-harness-dev-context": "0.2.1-rc.2"
+    }
+  },
+  "kernel_sha256": "111bcf3a26ec7e300d592e298231fe7d611526de3b86c1cdd1002c94d89536ed",
+  "dryRun": {
+    "patches": 82,
+    "patchesChanged": 60,
+    "files": 53
+  },
+  "patches": [
+    {
+      "id": 1,
+      "name": "WORKSPACE_CONTEXT_INTRO",
+      "layer": "提示词",
+      "changed": 1,
+      "files": [
+        "dsh-agent-instructions/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 2,
+      "name": "REPLACEMENT_WORKSPACE_CONTEXT_INTRO",
+      "layer": "提示词",
+      "changed": 0,
+      "files": [],
+      "status_after": "applied"
+    },
+    {
+      "id": 3,
+      "name": "SCOPE_INTRO",
+      "layer": "提示词",
+      "changed": 0,
+      "files": [],
+      "status_after": "applied"
+    },
+    {
+      "id": 4,
+      "name": "SYSTEM_PROMPT_PERSONA",
+      "layer": "提示词",
+      "changed": 4,
+      "files": [
+        "dsh-acp-app/cordis.patch.yml",
+        "dsh-headless/cordis.patch.yml",
+        "dsh-sdk-app/cordis.patch.yml",
+        "dsh-web-app/cordis.patch.yml"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 43,
+      "name": "WEB_PRESET_IDENTITY_STRIP",
+      "layer": "提示词",
+      "changed": 4,
+      "files": [
+        "dsh-web-app/presets/cordis.patch.yml",
+        "dsh-web-app/presets/minimal.patch.yml",
+        "dsh-web-app/presets/ptc.patch.yml",
+        "dsh-web-app/presets/standard.patch.yml"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 76,
+      "name": "PRESET_UNRESTRICTED_IDENTITY_STRIP",
+      "layer": "提示词",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 70,
+      "name": "PRESET_SHELL_NETWORK",
+      "layer": "提示词",
+      "changed": 2,
+      "files": [
+        "dsh-sdk-minimal/cordis.patch.yml",
+        "dsh-web-app/presets/minimal.patch.yml"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 73,
+      "name": "PRESET_BASH_MIRROR_LINE",
+      "layer": "提示词",
+      "changed": 0,
+      "files": [],
+      "status_after": "applied"
+    },
+    {
+      "id": 71,
+      "name": "LIANGSHEN_IDENTITY_LINE",
+      "layer": "提示词",
+      "changed": 0,
+      "files": [],
+      "status_after": "missing_file"
+    },
+    {
+      "id": 5,
+      "name": "APPROVAL_NEVER_SENTENCE",
+      "layer": "提示词",
+      "changed": 1,
+      "files": [
+        "dsh-user-approval/lib/types/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 6,
+      "name": "SANDBOX_DENY_FILE_WRITE",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-sandbox-local/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 7,
+      "name": "SANDBOX_MODE_DEFAULT",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-base/cordis.patch.yml"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 8,
+      "name": "APPROVAL_POLICY_DEFAULT",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-base/cordis.patch.yml"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 9,
+      "name": "APPROVAL_AUTO_GRANT",
+      "layer": "代码",
+      "changed": 2,
+      "files": [
+        "dsh-user-approval/lib/index.js",
+        "dsh-user-approval/lib/types/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 10,
+      "name": "APPROVAL_CONFIG_DEFAULT_NEVER",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-user-approval/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 11,
+      "name": "APPROVAL_NEVER_SENTENCE_BYPASS",
+      "layer": "提示词",
+      "changed": 1,
+      "files": [
+        "dsh-user-approval/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 12,
+      "name": "APPROVAL_ASK_SENTENCE_BYPASS",
+      "layer": "提示词",
+      "changed": 2,
+      "files": [
+        "dsh-user-approval/lib/index.js",
+        "dsh-user-approval/lib/types/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 13,
+      "name": "ESCALATION_WIDENING_EXEMPT",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-sandbox/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 14,
+      "name": "ESCALATION_GRANT_UNCONDITIONAL",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-sandbox/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 15,
+      "name": "SANDBOX_CONFINE_PASSTHROUGH",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-sandbox-local/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 16,
+      "name": "FS_FENCE_DISABLED",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-fs-sandbox/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 17,
+      "name": "FS_OBSERVATION_INTENT_FREE",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-fs-observation-policy/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 18,
+      "name": "REPEAT_TOOL_REMINDER_DISABLED",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-repeat-tool-reminder/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 19,
+      "name": "TOOL_RESULT_PRUNER_DISABLED",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-compaction-tool-result-pruner/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 21,
+      "name": "BASH_TIMEOUT_RESTORE",
+      "layer": "代码",
+      "changed": 0,
+      "files": [],
+      "status_after": "applied"
+    },
+    {
+      "id": 22,
+      "name": "READ_CAPS_RAISED",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-tool-fs/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 23,
+      "name": "SUBAGENT_MAXDEPTH_RAISED",
+      "layer": "代码",
+      "changed": 2,
+      "files": [
+        "dsh-subagent/lib/index.js",
+        "dsh-tool-subagent/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 24,
+      "name": "PRESET_FETCH_ENABLED",
+      "layer": "代码",
+      "changed": 0,
+      "files": [],
+      "status_after": "applied"
+    },
+    {
+      "id": 25,
+      "name": "HARNESS_IDENTITY_STRIP",
+      "layer": "提示词",
+      "changed": 1,
+      "files": [
+        "dsh-system-prompt/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 26,
+      "name": "MINIMAL_PERSONA_PURGE",
+      "layer": "提示词",
+      "changed": 2,
+      "files": [
+        "dsh-sdk-minimal/cordis.patch.yml",
+        "dsh-web-app/presets/minimal.patch.yml"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 80,
+      "name": "MINIMAL_OFFICIAL_TOOLSET",
+      "layer": "工具",
+      "changed": 0,
+      "files": [],
+      "status_after": "skipped"
+    },
+    {
+      "id": 28,
+      "name": "LIANGSHEN_PHASE1_KEEP_INJECT",
+      "layer": "提示词",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 32,
+      "name": "WEB_SURFACE_IDENTITY_NEUTRAL",
+      "layer": "提示词",
+      "changed": 2,
+      "files": [
+        "dsh-harness-dev-context/lib/index.js",
+        "dsh-web-app/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 29,
+      "name": "TOOL_WEB_UNTRUSTED_NEUTRAL",
+      "layer": "工具",
+      "changed": 1,
+      "files": [
+        "dsh-tool-web/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 30,
+      "name": "HOOKS_CLAUDE_DENY_ALLOW",
+      "layer": "工具",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 31,
+      "name": "HOOKS_CODEX_DENY_ALLOW",
+      "layer": "工具",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 33,
+      "name": "TOOL_SHELL_DENIAL_PROMPT",
+      "layer": "提示词",
+      "changed": 2,
+      "files": [
+        "dsh-tool-bash/lib/index.js",
+        "dsh-tool-pwsh/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 34,
+      "name": "SANDBOX_HINT_NEUTRAL",
+      "layer": "提示词",
+      "changed": 1,
+      "files": [
+        "dsh-sandbox/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 35,
+      "name": "ESCALATION_NEVER_REJECT",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-sandbox/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 36,
+      "name": "TOOL_FS_ESCALATION_SCHEMA",
+      "layer": "提示词",
+      "changed": 2,
+      "files": [
+        "dsh-sandbox/lib/index.js",
+        "dsh-tool-fs/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 37,
+      "name": "SUBAGENT_SCOPE_LOCK_NEUTRAL",
+      "layer": "提示词",
+      "changed": 2,
+      "files": [
+        "dsh-subagent/lib/index.js",
+        "dsh-subagent/lib/types/child-agent.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 38,
+      "name": "PERSONA_TEXT_PREFIX_ALIAS",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-persona/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 39,
+      "name": "SESSION_V0_PLUGIN_SUMMARY_ALIAS",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-session-format-v0-to-v1/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 40,
+      "name": "COMPLETE_PROMPT_KEEP_INJECT",
+      "layer": "0.1.5 兼容",
+      "changed": 1,
+      "files": [
+        "dsh-system-prompt/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 42,
+      "name": "SETTINGS_LEGACY_API",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-settings/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 45,
+      "name": "OFFICIAL_DESKTOP_UPDATE_HANDOFF",
+      "layer": "代码",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 46,
+      "name": "OFFICIAL_DESKTOP_UPDATE_ASCII",
+      "layer": "代码",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 47,
+      "name": "ANTHROPIC_OAUTH_NO_CLAUDE_IDENTITY",
+      "layer": "0.2.0 兼容",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 48,
+      "name": "TOOL_SHELL_DELETE_MOVE_NEUTRAL",
+      "layer": "工具",
+      "changed": 2,
+      "files": [
+        "dsh-tool-bash/lib/index.js",
+        "dsh-tool-pwsh/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 49,
+      "name": "ANTHROPIC_OAUTH_CLI_NEUTRAL",
+      "layer": "0.2.0 兼容",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 50,
+      "name": "SESSION_REFERENCE_FRAMING_NEUTRAL",
+      "layer": "提示词",
+      "changed": 0,
+      "files": [],
+      "status_after": "applied"
+    },
+    {
+      "id": 51,
+      "name": "FRESH_SESSION_FULL_ACCESS",
+      "layer": "代码",
+      "changed": 2,
+      "files": [
+        "dsh-permission-presets/lib/index.js",
+        "dsh-permission-presets/lib/types/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 52,
+      "name": "SESSION_LOG_UPLOAD_DEFAULT_OFF",
+      "layer": "代码",
+      "changed": 2,
+      "files": [
+        "dsh-session-log-deepseek/lib/index.js",
+        "dsh-session-log-deepseek/lib/types/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 53,
+      "name": "WEB_SURFACE_PROHIBITION",
+      "layer": "提示词",
+      "changed": 1,
+      "files": [
+        "dsh-harness-dev-context/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 54,
+      "name": "DELIVERABLE_DO_NOT",
+      "layer": "提示词",
+      "changed": 1,
+      "files": [
+        "dsh-client-ui-deliverables/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 55,
+      "name": "SYSTEM_PROMPT_REPLACE_HEAD",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-agent-loop/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 74,
+      "name": "ASSEMBLE_BEFORE_PRESTEP",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-agent-loop/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 66,
+      "name": "SYSTEM_PROMPT_RENDER_GUARD",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-system-prompt/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 83,
+      "name": "DESKTOP_HOST_CLOSE_NO_FATAL",
+      "layer": "代码",
+      "changed": 0,
+      "files": [],
+      "status_after": "missing_file"
+    },
+    {
+      "id": 84,
+      "name": "DESKTOP_HOST_CLOSE_CODE0_NO_FAIL",
+      "layer": "代码",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 67,
+      "name": "AGENT_LOOP_MESSAGES_GUARD",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-agent-loop/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 68,
+      "name": "SYSTEM_NODES_CONTENT_GUARD",
+      "layer": "代码",
+      "changed": 2,
+      "files": [
+        "dsh-agent-loop/lib/index.js",
+        "dsh-session/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 69,
+      "name": "MODEL_STREAM_RELEASE",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-llm-deepseek/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 72,
+      "name": "MESSAGES_SYSTEM_CURRENT",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-llm-deepseek/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 56,
+      "name": "REWIND_HIDE_CUT_ONLY",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-client-ui-conversation/lib/client.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 77,
+      "name": "REWIND_DROP_SENT_ON_APPEND",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-client-ui-conversation/lib/client.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 75,
+      "name": "REWIND_RESET_TODOS",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-tool-todo/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 57,
+      "name": "DEEPSEEK_SYSTEM_ROLE",
+      "layer": "代码",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 58,
+      "name": "REWIND_SKIP_DERIVE",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-session/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 59,
+      "name": "OFFICIAL_AUTO_REVIEW_PASSTHROUGH",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-experimental-auto-review/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 60,
+      "name": "OFFICIAL_RUN_CODE_APPROVAL_NEUTRAL",
+      "layer": "工具",
+      "changed": 2,
+      "files": [
+        "dsh-tools/lib/index.js",
+        "dsh-tools/lib/types/ptc.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 61,
+      "name": "OFFICIAL_SANDBOX_POLICY_NEUTRAL",
+      "layer": "提示词",
+      "changed": 1,
+      "files": [
+        "dsh-sandbox-policy/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 62,
+      "name": "OFFICIAL_TOOL_ASK_FAILOPEN",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-tools/lib/types/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 63,
+      "name": "OFFICIAL_PLAN_MODE_NEUTRAL",
+      "layer": "提示词",
+      "changed": 4,
+      "files": [
+        "dsh-base/cordis.patch.yml",
+        "dsh-web-app/presets/cordis.patch.yml",
+        "dsh-web-app/presets/ptc.patch.yml",
+        "dsh-web-app/presets/standard.patch.yml"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 64,
+      "name": "HOOKS_STOP_STEER_NEUTRAL",
+      "layer": "工具",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 65,
+      "name": "HOOKS_PRESTEP_REJECT_NEUTRAL",
+      "layer": "工具",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 78,
+      "name": "OVERLAY_RESTORE_FROM_BAK",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-app-boot/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 82,
+      "name": "DESKTOP_SHELL_PROFILE_FALLBACK",
+      "layer": "代码",
+      "changed": 0,
+      "files": [],
+      "status_after": "na"
+    },
+    {
+      "id": 85,
+      "name": "SESSION_PROMPT_ALWAYS_FOLLOWUP",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-api-session-controller/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 86,
+      "name": "SESSION_STEER_ALWAYS_FOLLOWUP",
+      "layer": "代码",
+      "changed": 2,
+      "files": [
+        "dsh-agent-loop/lib/index.js",
+        "dsh-api-session-controller/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 87,
+      "name": "HUNG_PROMPT_LF_NEEDLE",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-agent-loop/lib/index.js"
+      ],
+      "status_after": "applied"
+    },
+    {
+      "id": 88,
+      "name": "HUNG_PROMPT_STRICT_NEEDLE",
+      "layer": "代码",
+      "changed": 1,
+      "files": [
+        "dsh-agent-loop/lib/index.js"
+      ],
+      "status_after": "applied"
+    }
+  ],
+  "files": {
+    "dsh-agent-instructions/lib/index.js": "3ac195f57618c21d94e461a69778aabc7c19f40502a57ed225749a4cd6e51a2d",
+    "dsh-web-app/cordis.patch.yml": "b184edc231c1ce61ce03b70462060ae6cc957921c7438756c8bffb8dd2c7b097",
+    "dsh-web-app/lib/index.js": "ede12a47136fad6dbc6a8a3168bfbb14b13a0c64594912215eaa16214412cd3b",
+    "dsh-harness-dev-context/lib/index.js": "2de5f70248d9a1706bc4ad9dff673884cb747247583154afb17a5e2605fa6a5b",
+    "dsh-headless/cordis.patch.yml": "4cabf50f2ec5fbfa2443354a650b6dd44bc1c14635910992c93a91dbbea1173f",
+    "dsh-web-app/presets/standard.patch.yml": "226cf2e9ab5cd359728a6f0049ef6acbae2ab25ffce855185c53ec0e5f8a0464",
+    "dsh-user-approval/lib/types/index.js": "3d87a0c95a7b4ccaa4a792ea8dc7d5d87a6d9f0cceb84b5e17c59f3bba08932d",
+    "dsh-user-approval/lib/index.js": "dae8bf34f3d523beaeee5670d7c7c10c0e08e665eae203471da4c92fd16fd718",
+    "dsh-sandbox/lib/index.js": "4f95f280f19aad61ae4de64f7767ce4709169461ef507d8cedbeee2ea90cb89b",
+    "dsh-fs-sandbox/lib/index.js": "d57310554ade21f6e2912d09d1edf104ae0e93117840e6ecfa201f63b959cf13",
+    "dsh-sandbox-local/lib/index.js": "2260d2ff3babc48ad66e2296840e1f62001eab31906631c554ca8ceb451e24df",
+    "dsh-base/cordis.patch.yml": "d5b5fa6d7864acba5621b95ccaee9800870f20dda7b0a4f069fd7930cf92679e",
+    "dsh-settings/lib/index.js": "abc687dfd03781a3fd9498dfce4199a4cebb5026ae2e0b55b43f659ff5eee81e",
+    "dsh-fs-observation-policy/lib/index.js": "509be811a38aaf3ca379e79b1ada74fd05c43561ebd0808375e1a5b780da0862",
+    "dsh-repeat-tool-reminder/lib/index.js": "9f58072a4526950da939eca01879051e9a762c67003a76a86a96e6a4e3aa3610",
+    "dsh-compaction-tool-result-pruner/lib/index.js": "cb89cd266e4063e6f50dc4b0d6640943dd41d7d197dd775b71db8fc6a9c93a91",
+    "dsh-tool-fs/lib/index.js": "a8866836428f7af011482dfe769b9eba15073759abad69b30bc4e74e7abdaf54",
+    "dsh-tool-subagent/lib/index.js": "c2d1a2c836cbab2e4c61e0dcd1f024ba9b6e8ba24bd3a27acded5a890aa7f13f",
+    "dsh-subagent/lib/index.js": "956aec317e4a115a3ad46438573691eaddb565efbb3983ca26b3c96f8dc12621",
+    "dsh-subagent/lib/types/child-agent.js": "2b1b8a4b610dc187cb57e620cdbd9b54426b3935485e9e75f298fb0f83315f23",
+    "dsh-base/package.json": "238a9c488f0eb58933b931451445f3d5b087f9938c51a8626467425e1aff28b1",
+    "dsh-web-app/presets/cordis.patch.yml": "814cc552267277a7ed13f2c9e2226e5f19a927c8b10f0e1a2cc90d8eaee7426b",
+    "dsh-web-app/presets/minimal.patch.yml": "34f78e889bdac3f2372ee4f7152571f4d6fbffaf9f2ed6eb93c63264fa8d75bc",
+    "dsh-web-app/presets/ptc.patch.yml": "71916a35ac5f8c02e26cb87421c8ef6677140fadb725cbf367a23693277f8e12",
+    "dsh-acp-app/cordis.patch.yml": "725b8533f1699724c664d7cfe49ecc2742ffcf5aaf27d01b5748a7f91a19d9bc",
+    "dsh-sdk-app/cordis.patch.yml": "0211e93d0868b2f55d9051aa8eaddfc546bb1c1ff0eaa4f9a1ed4d502660be65",
+    "dsh-sdk-minimal/cordis.patch.yml": "965016d90cfc170770b4a4ac8c0a0ca60596f7b5b6c4fc665930dcb1d7e1f936",
+    "dsh-tool-bash/lib/index.js": "e64e11d4c542c8d85e70c2a810205d22ef20e8252d49fd6ea102108282178434",
+    "dsh-tool-pwsh/lib/index.js": "f74bef5d2c65b7d7ad5979be9c8d6a7505be372ac08707eb13b466e5209905bb",
+    "dsh-persona/lib/index.js": "dc14afff0654b652cccaca9d015ff3b6f084d01254be3e6c1a79872cb2b8d968",
+    "dsh-session-format-v0-to-v1/lib/index.js": "66ea885706f87f8e090e6739c7fc93fc43343ac2da0940b823d12f0f7ae997cc",
+    "dsh-system-prompt/lib/index.js": "e02c67678be0aaa6d136f2cca582da98915ccd904a47c2cbdf5061a9908b0c8c",
+    "dsh-tool-web/lib/index.js": "2df4c264242409e05989777398d7dfc66a5a5277318d43e63d667336fc255ebe",
+    "dsh-api-session-controller/lib/index.js": "0713814fd1fecc05c74c4ceb6a0ae265ddb59eb5214f5577a95f857c22f7d180",
+    "dsh-session-reference/lib/index.js": "f17a18280d3c1843d13b71f94a14b95fcd571955e7729fbac977411df386cf1b",
+    "dsh-session-reference/lib/types/index.js": "2b6bc3ea3315f4da76a693a05f08ba16800ed3cd346336694bc71cb6b4ae01b3",
+    "dsh-session-reference/lib/types/spill.js": "05e39228b808a882b1c215dda0e5e28372b16c19e825ff0d5df743c2c05caec1",
+    "dsh-permission-presets/lib/index.js": "8a8aedfc8af4210a352b5a95acd29c979cd0eb79b7be8a90f75fe1bf153010a7",
+    "dsh-permission-presets/lib/types/index.js": "532b31cdf64ebb4afd7d8270276926bfa603f95faee5b29b37ee3070ea65c449",
+    "dsh-session-log-deepseek/lib/index.js": "b457f2645890ab5af0345ed39c5ba55b045ed17c8403d8258a7c24493fe123cb",
+    "dsh-session-log-deepseek/lib/types/index.js": "c2cd6109bbab26055f44ee1d5f7d9d2b5db05f63ab0d1f3cf1a6ee2003bcda43",
+    "dsh-client-ui-deliverables/lib/index.js": "1eca88e52553d808a57b8faf60378eef2188d3f298610aaccbf99477c80862ec",
+    "dsh-llm-deepseek/lib/index.js": "0785f199a5540472298936646b3238f90f736e8985fc664a75f5f544ddc67d18",
+    "dsh-session/lib/index.js": "c24cc8dc71bc8ef48c99c5e8231a4831d4880d4a7c85fb7f62d9869fd81b5869",
+    "dsh-agent-loop/lib/index.js": "9783c7e91a37aa2a827cece36dacce6455009481263bf77f708434a9a7ba894c",
+    "dsh-app-boot/lib/index.js": "88fe3e90d46943d970ffcde656b3835d66838b7f03689e6d9c3834525ed2fee1",
+    "dsh-client-ui-conversation/lib/client.js": "4cb18eadfc2538c77313a77f6ccc9ad0f6621275fd7114413384ba475448057c",
+    "dsh-tool-todo/lib/index.js": "6e42cbef5fcdcb9ad14424da58dd5358ba5aafc1b170b708007c639ee5d732f8",
+    "dsh-experimental-auto-review/lib/index.js": "9cef71b1ae1e6b031631a7a3984a17908a489f53994420d55357a235cd5c92fc",
+    "dsh-tools/lib/index.js": "543d6336692ea37f7377dd32a00a17e1f6a2869f3ed82d1dc56d6c2291426ebd",
+    "dsh-tools/lib/types/index.js": "d79d0ff914325c588ed4408282a15480fe9ed97c84b8a8a452e07a1b06ae30a5",
+    "dsh-tools/lib/types/ptc.js": "5954dc133b48a0a5d4300c0c32726246d7c9b6ba37cf83b5051068cde75ab975",
+    "dsh-sandbox-policy/lib/index.js": "6c6e0684b53bfd23edb8e61f440be284a0c8015d85a0b05d5928ef1207452cdd"
+  },
+  "crossCheck": {
+    "compared": 53,
+    "mismatchedCount": 0,
+    "sample": []
+  }
+}

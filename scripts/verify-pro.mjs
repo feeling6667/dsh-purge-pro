@@ -34,6 +34,8 @@ const surface = flag("--surface", process.env.DSH_SURFACE || "desktop");
 process.env.DSH_SURFACE = surface;
 
 const sha256 = (buf) => crypto.createHash("sha256").update(buf).digest("hex");
+// 仓库里存 LF、Windows 工作区是 CRLF：文本文件先归一化再比，二进制（含 NUL）原样比。
+const sha256text = (buf) => (buf.includes(0) ? sha256(buf) : sha256(Buffer.from(buf.toString("utf8").replace(/\r\n/g, "\n"), "utf8")));
 const relOf = (base, fp) => {
   const rel = path.relative(base, fp);
   return !rel || rel.startsWith("..") || path.isAbsolute(rel) ? "" : rel.split(path.sep).join("/");
@@ -305,7 +307,7 @@ async function cmdRepo() {
   for (const [name, data] of entries) {
     const rel = name.split("/").slice(1).join("/");
     if (!rel) continue;
-    remote.set(rel, sha256(data));
+    remote.set(rel, sha256text(data));
   }
   const local = new Map();
   const skip = new Set([".git", "node_modules"]);
@@ -314,7 +316,7 @@ async function cmdRepo() {
       if (skip.has(e.name)) continue;
       const fp = path.join(d, e.name);
       if (e.isDirectory()) walk(fp);
-      else if (e.isFile()) local.set(path.relative(dir, fp).split(path.sep).join("/"), sha256(fs.readFileSync(fp)));
+      else if (e.isFile()) local.set(path.relative(dir, fp).split(path.sep).join("/"), sha256text(fs.readFileSync(fp)));
     }
   };
   walk(dir);
